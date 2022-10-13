@@ -39,6 +39,24 @@ const createClient = (client) => { // CRIAR
 }
 // FIM CRUD
 
+const isValidFields = () => {
+    // ira retornar verdadeiro se todos os requisitos HTML do form for atendidos
+    return document.getElementById('form').reportValidity(); 
+}
+
+// Interação com o Layout
+const saveClient = () => {
+    if (isValidFields()) {
+        const client = {
+            nome: document.getElementById('nome').value,
+            email: document.getElementById('email').value,
+            celular: document.getElementById('celular').value,
+            cidade: document.getElementById('cidade').value
+        };
+        createClient(cliente);
+    }
+}
+
 
 // Eventos    
 document.getElementById('cadastrarCliente')
@@ -46,3 +64,6 @@ document.getElementById('cadastrarCliente')
 
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)  
+
+document.getElementById('salvar')
+    .addEventListener('click', saveClient);
