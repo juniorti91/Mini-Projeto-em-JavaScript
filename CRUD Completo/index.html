@@ -19,7 +19,7 @@
     </header>
     <main>
         <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
-        <table class="records">
+        <table id="tableClient" class="records">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -30,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>Maria</td>
                     <td>maria@gmail.com</td>
                     <td>(11) 97165-1111</td>
@@ -59,7 +59,7 @@
                         <button type="button" class="button green">editar</button>
                         <button type="button" class="button red">excluir</button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="modal" id="modal">
@@ -69,10 +69,10 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form id="form" class="modal-form">
-                    <input type="text" id="nome" class="modal-field" placeholder="Nome do Cliente" required>
-                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
-                    <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
-                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente" required>
+                    <input type="email" id="email" data-index="new" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input type="text" id="celular" data-index="new" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input type="text" id="cidade" data-index="new" class="modal-field" placeholder="Cidade do Cliente" required>
                 </form>
                 <footer class="modal-footer">
                     <button id="salvar" class="button green">Salvar</button>
@@ -82,7 +82,7 @@
         </div>
     </main>
     <footer>
-        Copyright &copy; Prof. Fernando Leonid
+        Copyright &copy; Adroaldo Junior
     </footer>
 </body>
 </html>
